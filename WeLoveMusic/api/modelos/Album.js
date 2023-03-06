@@ -1,4 +1,4 @@
-import { DataTypes as Dt, Model } from "sequalize";
+import { DataTypes as Dt, Model } from "sequelize";
 import db from "../bd/db.js"
 
 class Album extends Model {}
@@ -49,5 +49,5 @@ Album.init({
     sequelize: db,
     modelName: "Album"
     }
-)
+) 
 export default Album;

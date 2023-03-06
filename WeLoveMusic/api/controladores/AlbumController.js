@@ -1,4 +1,4 @@
-import { Album, Formato } from "../modelos/index";
+import { Album, Formato } from "../modelos/index.js";
 
 // class AlbumController {
 //     static async getAllAlbums(req, res) {
