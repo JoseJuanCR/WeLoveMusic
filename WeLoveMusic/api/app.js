@@ -1,10 +1,8 @@
-import express from 'express'
-import config from './config';
+import { config } from "dotenv"
 
 
-const app = express()
-let port = 6000;
-//Settear el puerto
-app.set('port', config.port)
+config();
 
-export default app
+export default{
+    port:process.env.PORT || 3000
+}

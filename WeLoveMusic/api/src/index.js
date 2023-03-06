@@ -1,4 +1,4 @@
-import app from "../app"
+import app from "../server.js"
 app.listen(app.get('port'))
 
 
