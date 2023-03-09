@@ -1,4 +1,4 @@
-import { DataTypes as Dt, Model } from "sequalize";
+import { DataTypes as Dt, Model } from "sequelize";
 import db from "../bd/db.js"
 
 class Rol extends Model {}

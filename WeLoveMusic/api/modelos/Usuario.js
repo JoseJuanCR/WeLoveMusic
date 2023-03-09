@@ -1,30 +1,30 @@
-import { DataTypes as Dt, Model } from "sequalize";
+import { DataTypes as Dt, Model } from "sequelize";
 import db from "../bd/db.js"
 
 class Usuario extends Model {}
 
 Usuario.init({
     Nombre: {
-        type: Dt.STRING(50),
+        type: Dt.STRING(20),
         allowNull: false,
         validate: {
             is: /^[a-zA-ZáéíóúüÁÉÍÓÚÜñÑ]+$/u,
-            len: [2, 10],
+            len: [2, 20],
         }
     },
     ApellidoP: {
-        type: Dt.STRING(50),
+        type: Dt.STRING(20),
         allowNull: false,
         validate: {
             is: /^[a-zA-ZáéíóúüÁÉÍÓÚÜñÑ]+$/u,
-            len: [2, 10],
+            len: [2, 20],
         }
     },
     ApellidoM: {
-        type: Dt.STRING(50),
+        type: Dt.STRING(20),
         validate: {
             is: /^[a-zA-ZáéíóúüÁÉÍÓÚÜñÑ]+$/u,
-            len: [2, 10],
+            len: [2, 20],
         }
     },
     Telefono: {
@@ -33,7 +33,7 @@ Usuario.init({
 
     },
     Mail: {
-        type: Dt.STRING(50),
+        type: Dt.STRING(60),
         unique: true,
         allowNull: false,
         validate: {
@@ -41,12 +41,16 @@ Usuario.init({
         }
     },
     User: {
-        type: Dt.STRING(50),
+        type: Dt.STRING(10),
         allowNull: false,
+        validate: {
+            is: /^[a-zA-ZáéíóúüÁÉÍÓÚÜñÑ]+$/u,
+            len: [2, 10],
+        }
 
     },
     Pass: {
-        type: Dt.STRING(50),
+        type: Dt.STRING(20),
         allowNull: false,
         validate: {
             len: [8, 16],

@@ -5,7 +5,7 @@ class Album extends Model {}
 
 Album.init({
     NombreAlbum: {
-        type: Dt.STRING(50),
+        type: Dt.STRING(10),
         allowNull: false,
         validate: {
             is: /^[a-zA-ZáéíóúüÁÉÍÓÚÜñÑ]+$/u,
@@ -20,7 +20,7 @@ Album.init({
         }
     },
     FormatoDisponible: {
-        type: Dt.STRING(50),
+        type: Dt.STRING(20),
         allowNull: false,
         validate: {
             is: /^[a-zA-ZáéíóúüÁÉÍÓÚÜñÑ]+$/u,
@@ -35,7 +35,7 @@ Album.init({
         }
     },
     stock: {
-        type: Dt.INTEGER,
+        type: Dt.INTEGER(10),
         allowNull: false,
         validate:{
             isNumeric:true
